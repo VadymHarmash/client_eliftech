@@ -1,0 +1,171 @@
+.eventCards {
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__card {
+        padding: 20px;
+        width: 24%;
+        border: 1px #000000 solid;
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__date{
+            margin-bottom: 10px;
+        }
+        &__buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            color: #208ddb;
+
+            &__register {
+                cursor: pointer;
+            }
+
+            &__view {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__participants {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #FFFFFF;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        flex-wrap: wrap;
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            h2{
+                display: block;
+                width: 98%;
+                text-align: center;
+            }
+            span{
+                cursor: pointer;
+            }
+        }
+
+        &__noone{
+            display: flex;
+        }
+
+        &__list{
+            display: flex;
+            gap: 30px;
+        }
+    }
+
+    &__participant {
+        padding: 20px;
+        width: 24%;
+        border: 1px #000000 solid;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.registerModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    overflow-y: auto;
+    transition: opacity 0.3s;
+    z-index: 999;
+    backdrop-filter: blur(7px);
+
+    &__wrapper {
+        position: absolute;
+        top: calc(50% - 300px);
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+    }
+
+    &__content {
+        position: relative;
+        background-color: #FFFFFF;
+        width: 100%;
+        max-width: 600px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &__title {
+            font-weight: 400;
+        }
+
+        &__close {
+            cursor: pointer;
+        }
+    }
+
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+
+            .error {
+                color: #FF0000;
+            }
+
+            input {
+                width: 30%;
+            }
+        }
+    }
+
+    &__whereHeared {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+
+        &__buttons {
+            margin-top: 10px;
+            display: flex;
+            gap: 35px;
+        }
+    }
+
+    &__submit {
+        width: 25%;
+        margin: 0 auto;
+    }
+}
