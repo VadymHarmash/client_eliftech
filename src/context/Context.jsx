@@ -7,7 +7,7 @@ export default function Context({ children }) {
 
     const eventsInit = async () => {
         try {
-            await fetch(`https://eliftech-server-f72u.onrender.com/events`, {
+            await fetch(`${process.env.SERVER}/events`, {
                 method: "GET"
             })
                 .then(response => response.json())
