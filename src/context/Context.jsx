@@ -7,7 +7,7 @@ export default function Context({ children }) {
 
     const eventsInit = async () => {
         try {
-            await fetch(`${process.env.REACT_APP_DB}`, {
+            await fetch(`${process.env.SERVER}`, {
                 method: "GET"
             })
                 .then(response => response.json())
