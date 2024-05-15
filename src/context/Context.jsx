@@ -7,7 +7,7 @@ export default function Context({ children }) {
 
     const eventsInit = async () => {
         try {
-            await fetch(`${process.env.SERVER}`, {
+            await fetch(`${process.env.SERVER}/events`, {
                 method: "GET"
             })
                 .then(response => response.json())

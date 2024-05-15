@@ -38,7 +38,7 @@ export default function RegisterModal({ styles, onClose, eventId }) {
     const handleSubmit = async () => {
         if (!validateForm()) return;
         
-        const response = await fetch(`${process.env.SERVER}/${eventId}/participants`, {
+        const response = await fetch(`${process.env.SERVER}/events/${eventId}/participants`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
